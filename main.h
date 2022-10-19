@@ -5,6 +5,13 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+struct convert
+{
+	char *sym;
+	int (*f)(va_list);
+};
+typedef struct convert conver_t;
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list args);
