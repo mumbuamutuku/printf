@@ -17,8 +17,8 @@ struct convert
 };
 typedef struct convert conver_t;
 
-int _putchar(char c);
 int _printf(const char *format, ...);
+int _putchar(char c);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
@@ -26,6 +26,7 @@ int print_d(va_list args);
 int print_integer(va_list args);
 int parser(const char *format, conver_t f_list[], va_list args);
 int printbinary(va_list args);
+int print_number(va_list args);
 int print_unsigned_integer(va_list args);
 
 int print_unsigned_number(unsigned int);
