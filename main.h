@@ -7,7 +7,7 @@
 
 /**
 * struct convert - convert
-* @sym: the vali symbol
+* @sym: the valid symbol
 * @f: the function associated
 */
 struct convert
@@ -24,6 +24,7 @@ int print_string(va_list args);
 int print_percent(va_list args);
 int print_d(va_list args);
 int print_integer(va_list args);
-int parser(const char *format, conver_t f_list[], va_list arg_list);
+int parser(const char *format, conver_t f_list[], va_list arg);
 int printbinary(va_list args);
+
 #endif
