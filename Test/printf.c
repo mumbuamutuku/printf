@@ -1,9 +1,15 @@
 #include "main.h"
+
 /**
+
  * _printf - receives the main string and all the requisite parameters to
+
  * print a formated string
+
  * @format: a string containing all the desired characters
+
  * Return: total count of the characters printed
+
  */
 
 int _printf(const char *format, ...)

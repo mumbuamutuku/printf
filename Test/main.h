@@ -5,11 +5,6 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-/**
-* struct convert - convert
-* @sym: the vali symbol
-* @f: the function associated
-*/
 struct convert
 {
 	char *sym;
