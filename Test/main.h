@@ -5,11 +5,6 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-/**
-* struct convert - convert
-* @sym: the vali symbol
-* @f: the function associated
-*/
 struct convert
 {
 	char *sym;
@@ -25,5 +20,5 @@ int print_percent(va_list args);
 int print_d(va_list args);
 int print_integer(va_list args);
 int parser(const char *format, conver_t f_list[], va_list arg_list);
-int printbinary(va_list args);
+int (*getfunc(char x))(va_list args);
 #endif

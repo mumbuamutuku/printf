@@ -5,35 +5,22 @@
  * @format: a string containing all the desired characters
  * Return: total count of the characters printed
  */
-
-int _printf(const char *format, ...)
-
+int (*getfunc(char x))(va_list)
 {
-
-	int printed_chars;
-
+	int i = 0;
 	conver_t f_list[] = {
-
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
 		{"d", print_d},
 		{"i", print_integer},
-		{"b", printbinary},
 		{NULL, NULL}
-
 	};
-
-	va_list arg;
-
-	if (format == NULL)
-
-		return (-1);
-
-	va_start(arg, format);
-
-	printed_chars = parser(format, f_list, arg);
-	
-	va_end(arg);
-	return (printed_chars);
+	while (f_list[i].sym)
+	{
+		if (x == f_list[i].sym[0])
+			return (f_list[i].f);
+		i++;
+	}
+	return (NULL);
 }
