@@ -25,5 +25,5 @@ int print_percent(va_list args);
 int print_d(va_list args);
 int print_integer(va_list args);
 int parser(const char *format, conver_t f_list[], va_list arg_list);
-int (*getfunc(char x))(va_list args);
+int printbinary(va_list args);
 #endif

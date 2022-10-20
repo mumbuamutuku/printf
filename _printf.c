@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 		{"d", print_d},
 
 		{"i", print_integer},
-
+		{"b", printbinary},
 		{NULL, NULL}
 
 	};
