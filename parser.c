@@ -4,10 +4,10 @@
  * print a formated string
  * @format: string containing all the desired characters
  * @f_list: list of all the posible functions
- * @arg_list: list containing all the argumentents passed to the program
+ * @args: all the argumentents passed to the program
  * Return: total count of the characters printed
  */
-int parser(const char *format, conver_t f_list[], va_list arg_list)
+int parser(const char *format, conver_t f_list[], va_list args)
 {
 	int i, j, r_val, printed_chars;
 
@@ -20,7 +20,7 @@ int parser(const char *format, conver_t f_list[], va_list arg_list)
 			{
 				if (format[i + 1] == f_list[j].sym[0])
 				{
-					r_val = f_list[j].f(arg_list);
+					r_val = f_list[j].f(args);
 					if (r_val == -1)
 						return (-1);
 					printed_chars += r_val;

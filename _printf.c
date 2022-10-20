@@ -24,16 +24,16 @@ int _printf(const char *format, ...)
 
 	};
 
-	va_list arg;
+	va_list args;
 
 	if (format == NULL)
 
 		return (-1);
 
-	va_start(arg, format);
+	va_start(args, format);
 
-	printed_chars = parser(format, f_list, arg);
+	printed_chars = parser(format, f_list, args);
 	
-	va_end(arg);
+	va_end(args);
 	return (printed_chars);
 }
