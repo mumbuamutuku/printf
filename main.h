@@ -19,6 +19,7 @@ typedef struct convert conver_t;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
+int _puts(char *str);
 int print_char(va_list args);
 int print_string(va_list args);
 int print_percent(va_list args);
@@ -36,5 +37,8 @@ unsigned int base_len(unsigned int, int);
 void write_base(char *str);
 char *rev_string(char *);
 char *_memcpy(char *dest, char *src, unsigned int n);
+int print_hex(va_list args);
+int print_bighex(va_list args);
+char *convert(unsigned long int num, int base, int lowercase);
 
 #endif

@@ -18,7 +18,12 @@ int _printf(const char *format, ...)
 		{"i", print_integer},
 		{"b", printbinary},
 		{"u", print_unsigned_integer},
+<<<<<<< HEAD
 		{"o", print_octal},
+=======
+		{"x", print_hex},
+		{"X", print_bighex},
+>>>>>>> 73bce0fef840b71729fc9daa626252c4f893faaf
 		{NULL, NULL}
 	};
 	
