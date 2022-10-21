@@ -49,14 +49,14 @@ int print_unsigned_integer(va_list args)
  * @args: list of all the arguments passed to the program
  * Return: number of symbols printed to stdout
  */
-int print_octal(va_list list)
+int print_octal(va_list args)
 {
 	unsigned int num;
 	int len;
 	char *octal_rep;
 	char *rev_str;
 
-	num = va_arg(list, unsigned int);
+	num = va_arg(args, unsigned int);
 	if (num == 0)
 		return (_putchar('0'));
 	if (num < 1)
