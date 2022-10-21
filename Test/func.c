@@ -29,6 +29,7 @@ int print_string(va_list args)
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
+		
 		i++;
 		count++;
 	}
@@ -84,6 +85,8 @@ int print_d(va_list args)
 	}
 	return (count);
 }
+<<<<<<< HEAD
+
 /**
 * print_integer - prints integer
 * @args: integer argument
@@ -92,21 +95,22 @@ int print_d(va_list args)
 int print_integer(va_list args)
 {
 	return (print_d(args));
-}
+=======
 /**
- * print_unsigned_integer - Prints Unsigned integers
+ * unsigned_integer - prints unsigned integers
  * @args: list of all of the argumets
- * Return: count of the numbers
+ * Return: a count of the numbers
  */
-int print_unsigned_integer(va_list args)
+int unsigned_integer(va_list args)
 {
 	unsigned int num;
 
 	num = va_arg(args, unsigned int);
 
 	if (num == 0)
-		return (print_unsgined_integer(num));
-	if (num < -1)
+		return (print_unsigned_number(num));
+	if (num < 1)
 		return (-1);
-	return (print_unsgined_integer(num));
+	return (print_unsigned_number(num));
+>>>>>>> 48f7aa13c09604e215a7e135088dca4e23127856
 }
