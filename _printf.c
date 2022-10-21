@@ -18,6 +18,8 @@ int _printf(const char *format, ...)
 		{"i", print_integer},
 		{"b", printbinary},
 		{"u", print_unsigned_integer},
+		{"x", print_hex},
+		{"X", print_bighex},
 		{NULL, NULL}
 	};
 	
