@@ -29,9 +29,16 @@ int parser(const char *format, conver_t f_list[], va_list args);
 int printbinary(va_list args);
 int print_number(va_list args);
 int print_unsigned_integer(va_list args);
+int print_octal(va_list args);
 
+/*helper_functions*/
 int print_unsigned_number(unsigned int);
+unsigned int base_len(unsigned int, int);
+void write_base(char *str);
+char *rev_string(char *);
+char *_memcpy(char *dest, char *src, unsigned int n);
 int print_hex(va_list args);
 int print_bighex(va_list args);
 char *convert(unsigned long int num, int base, int lowercase);
+
 #endif
