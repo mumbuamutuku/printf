@@ -39,8 +39,8 @@ int print_unsigned_integer(va_list args)
 	num = va_arg(args, unsigned int);
 
 	if (num == 0)
-		return (print_unsigned_integer(num));
+		return (print_unsigned_number(num));
 	if (num < 1)
 		return (-1);
-	return (print_unsigned_integer(num));
+	return (print_unsigned_number(num));
 }
