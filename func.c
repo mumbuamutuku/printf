@@ -12,15 +12,6 @@ int print_char(va_list args)
 	return (_putchar(c));
 }
 /**
-* print_integer - prints integer
-* @args: integer argument
-* Return: the decimal function
-*/
-int print_integer(va_list args)
-{
-	return (print_d(args));
-}
-/**
 * print_string -priints striing
 * @args: string argument
 * Return: number of characters
@@ -98,4 +89,14 @@ int print_d(va_list args)
 		countnum /= 10;
 	}
 	return (count);
+}
+
+/**
+* print_integer - prints integer
+* @args: integer argument
+* Return: the decimal function
+*/
+int print_integer(va_list args)
+{
+	return (print_d(args));
 }
