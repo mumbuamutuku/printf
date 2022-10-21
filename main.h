@@ -29,6 +29,4 @@ int printbinary(va_list args);
 int print_number(va_list args);
 int print_unsigned_integer(va_list args);
 
-int print_unsigned_number(unsigned int);
-
 #endif
