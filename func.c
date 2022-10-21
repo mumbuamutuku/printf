@@ -93,20 +93,3 @@ int print_integer(va_list args)
 {
 	return (print_d(args));
 }
-/**
- * print_unsigned_integer - Prints Unsigned integers
- * @args: list of all of the argumets
- * Return: count of the numbers
- */
-int print_unsigned_integer(va_list args)
-{
-	unsigned int num;
-
-	num = va_arg(args, unsigned int);
-
-	if (num == 0)
-		return (print_unsgined_integer(num));
-	if (num < -1)
-		return (-1);
-	return (print_unsgined_integer(num));
-}

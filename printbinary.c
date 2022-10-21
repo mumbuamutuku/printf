@@ -27,3 +27,20 @@ int printbinary(va_list args)
 		_putchar(a[j] + '0');
 	return (i);
 }
+/**
+ * print_unsigned_integer - prints Unsigned integers
+ * @args: list of all of the argumets
+ * Return: count of the numbers
+ */
+int print_unsigned_integer(va_list args)
+{
+	unsigned int num;
+
+	num = va_arg(args, unsigned int);
+
+	if (num == 0)
+		return (print_unsigned_integer(num));
+	if (num < 1)
+		return (-1);
+	return (print_unsigned_integer(num));
+}
