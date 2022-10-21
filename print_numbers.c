@@ -6,7 +6,7 @@
  */
 int print_unsigned_number(unsigned int n)
 {
-	int dev, len;
+	int div, len;
 	unsigned int num;
 
 	div = 1;
