@@ -30,6 +30,7 @@ int printbinary(va_list args);
 int print_number(va_list args);
 int print_unsigned_integer(va_list args);
 int print_octal(va_list args);
+int print_bigS(va_list args);
 
 /*helper_functions*/
 int print_unsigned_number(unsigned int);
