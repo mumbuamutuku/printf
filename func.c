@@ -39,16 +39,20 @@ int print_string(va_list args)
  * @args: string  argument
  * Return: return the percent sing
  */
-int print_percent(va_list args)
+int print_percent(__attribute__((unused))va_list args)
 {
-	char *str;
-
-	str = "%";
-	if (va_arg(args, int) == *str)
-	{
-		return (*str);
-	}
-	return (*str);
+	_putchar('%');
+	return (1);
+/**
+*	char *str;
+*
+*	str = "%";
+*	if (va_arg(args, int) == *str)
+*	{
+*		return (*str);
+*	}
+*	return (*str);
+*/
 }
 /**
  * print_d - prints a decimal
