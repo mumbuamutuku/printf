@@ -11,7 +11,7 @@ int printbinary(va_list args)
 	char *str;
 	char *rev_str;
 
-	num = va_arg(list, unsigned int);
+	num = va_arg(args, unsigned int);
 	if (num == 0)
 		return (_write_char('0'));
 	if (num < 1)
