@@ -13,7 +13,7 @@ int printbinary(va_list args)
 
 	num = va_arg(args, unsigned int);
 	if (num == 0)
-		return (_write_char('0'));
+		return (_putchar('0'));
 	if (num < 1)
 		return (-1);
 	len = base_len(num, 2);
@@ -32,7 +32,7 @@ int printbinary(va_list args)
 	rev_str = rev_string(str);
 	if (rev_str == NULL)
 		return (-1);
-	_putchar(rev_str);
+	_puts(rev_str);
 	free(str);
 	free(rev_str);
 	return (len);
