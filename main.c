@@ -84,6 +84,8 @@ int main(void)
 
 _printf("%b\n", 98);
 printf("%b\n", 98);
+_printf("%u\n", 1024);
+printf("%u\n", 1024);
     return (0);
 
 }
