@@ -43,16 +43,6 @@ int print_percent(__attribute__((unused))va_list args)
 {
 	_putchar('%');
 	return (1);
-/**
-*	char *str;
-*
-*	str = "%";
-*	if (va_arg(args, int) == *str)
-*	{
-*		return (*str);
-*	}
-*	return (*str);
-*/
 }
 /**
  * print_d - prints a decimal
