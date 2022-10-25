@@ -6,7 +6,7 @@
  */
 int print_unsig(va_list arg)
 {
-	unsigned int n = va_arg(arg, unsigned int)
+	unsigned int n = va_arg(arg, unsigned int);
 	int count = 0;
 	unsigned int num_copy = n;
 
@@ -18,7 +18,7 @@ int print_unsig(va_list arg)
 		count++;
 	}
 	if (n >= 10)
-		print_unsig(n / 10);
+/*		print_unsigned_integer(n / 10);*/
 	_putchar (n % 10 + '0');
 	return (count);
 }
