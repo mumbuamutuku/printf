@@ -8,9 +8,7 @@
 int _printf(const char *format, ...)
 {
 	int printed_chars;
-	
 	conver_t f_list[] = {
-		
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
@@ -18,21 +16,20 @@ int _printf(const char *format, ...)
 		{"i", print_integer},
 		{"b", printbinary},
 		{"u", print_unsigned_integer},
-		{"o", print_octal},
-		{"x", print_hex},
-		{"X", print_bighex},
+		{"o", print_octals},
+		{"x", print_hexalow},
+		{"X", print_hexaup},
+		{"S", print_bigS},
+		{"r", print_reversed},
+		{"R", rot13},
 		{NULL, NULL}
 	};
-	
 	va_list args;
-	
+
 	if (format == NULL)
 		return (-1);
-	
 	va_start(args, format);
-	
 	printed_chars = parser(format, f_list, args);
-	
 	va_end(args);
 	return (printed_chars);
 }

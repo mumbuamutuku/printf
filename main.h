@@ -29,7 +29,10 @@ int parser(const char *format, conver_t f_list[], va_list args);
 int printbinary(va_list args);
 int print_number(va_list args);
 int print_unsigned_integer(va_list args);
-int print_octal(va_list args);
+int print_octals(va_list args);
+int print_bigS(va_list args);
+int print_reversed(va_list args);
+int rot13(va_list);
 
 /*helper_functions*/
 int print_unsigned_number(unsigned int);
@@ -40,5 +43,8 @@ char *_memcpy(char *dest, char *src, unsigned int n);
 int print_hex(va_list args);
 int print_bighex(va_list args);
 char *convert(unsigned long int num, int base, int lowercase);
-
+int print_octal(va_list args);
+int print_hexalow(va_list args);
+int print_hexaup(va_list args);
+int print_unsig(va_list arg);
 #endif

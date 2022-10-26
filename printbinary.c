@@ -6,26 +6,36 @@
 */
 int printbinary(va_list args)
 {
-	unsigned int c;
-	int i, j;
-	int a[100];
+	unsigned int num;
+	int i, len;
+	char *str;
+	char *rev_str;
 
-	c = va_arg(args, int);
-	i = 0;
-	if (c == 0)
-	{
-		_putchar('0');
+	num = va_arg(args, unsigned int);
+	if (num == 0)
+		return (_putchar('0'));
+	if (num < 1)
 		return (-1);
-	}
-	while (c > 0)
+	len = base_len(num, 2);
+	str = malloc(sizeof(char) * len + 1);
+	if (str == NULL)
+		return (-1);
+	for (i = 0; num > 0; i++)
 	{
-		a[i] = c % 2;
-		c = c / 2;
-		i++;
+		if (num % 2 == 0)
+			str[i] = '0';
+		else
+			str[i] = '1';
+		num = num / 2;
 	}
-	for (j = i - 1; j >= 0; j--)
-		_putchar(a[j] + '0');
-	return (i);
+	str[i] = '\0';
+	rev_str = rev_string(str);
+	if (rev_str == NULL)
+		return (-1);
+	_puts(rev_str);
+	free(str);
+	free(rev_str);
+	return (len);
 }
 /**
  * print_unsigned_integer - prints Unsigned integers
