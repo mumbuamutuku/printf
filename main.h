@@ -33,6 +33,7 @@ int print_octals(va_list args);
 int print_bigS(va_list args);
 int print_reversed(va_list args);
 int rot13(va_list);
+int print_op(const char *format, fmt_t *print_arr, va_list list);
 
 /*helper_functions*/
 int print_unsigned_number(unsigned int);
